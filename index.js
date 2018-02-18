@@ -25,12 +25,12 @@ request(url, function(error, response, html){
         json.release = release;
     })
 
-    // $('.star-box-giga-star').filter(function(){
-    //     var data = $(this);
-    //     rating = data.text();
+    $('.imdbRating').filter(function(){
+        var data = $(this);
+        rating = data.children().first().children().first().children().text();
 
-    //     json.rating = rating;
-    // })
+        json.rating = rating;
+    })
 }
 
 
