@@ -6,7 +6,7 @@ var app     = express();
 
 app.get('/scrape', function(req, res){
 
-url = 'http://www.imdb.com/title/tt1229340/';
+url = 'http://www.imdb.com/title/tt1825683/';
 
 request(url, function(error, response, html){
     if(!error){
@@ -21,7 +21,7 @@ request(url, function(error, response, html){
         title = data.children().first().text();
         release = data.children().first().children().first().children().first().text();
 
-        json.title = title;
+        json.title = title.trim();
         json.release = release;
     })
 
