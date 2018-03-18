@@ -31,6 +31,13 @@ request(url, function(error, response, html){
 
         json.rating = rating;
     })
+
+    // $('.subtext').filter(function(){
+    //     var data = $(this);
+    //     rating = data.children().first().children().first().children().text();
+
+    //     json.rating = rating;
+    // })
 }
 
 
